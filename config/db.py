@@ -1,7 +1,7 @@
 import mysql.connector
 import re
-from db_queries import *
-from isInstalled import *
+from config.db_queries import *
+from config.isInstalled import *
 import datetime
 
 dbConfigLocal = {"host":"localhost","port":"3306","user":"root","passwd":""}

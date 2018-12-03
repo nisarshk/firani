@@ -7,7 +7,7 @@ import base64
 import time
 from apiclient.http import MediaFileUpload,MediaIoBaseDownload
 from apiclient.discovery import build
-import urllib2
+import urllib
 import requests
 from oauth2client import file, client, tools
 import flask
@@ -376,8 +376,8 @@ def syncMail(service,mailId,filterData):
                 return getMailDetails(messages, mailId,filterData,ts)
 
             return messages
-        except errors.HttpError, error:
-            print 'An error occurred: %s' % error
+        except errors.HttpError:
+            print ('An error occurred: %s' % error)
 
     return redirect(url_for('login'))
 
